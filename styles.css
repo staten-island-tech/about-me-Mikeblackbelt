@@ -1,0 +1,74 @@
+body {
+    background-color: hsl(0, 0%, 13%);
+    text-align: center;
+}
+
+#ttl {
+    animation: shiftGradient 7s infinite;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    color: transparent; /* Added to ensure text is transparent */
+}
+#name {
+    animation: shiftGradient 7s infinite;
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+    text-align: center;
+}
+
+
+@keyframes glowShift {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.6), 0 0 15px rgba(255, 0, 0, 0.4);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(0, 0, 255, 0.8), 0 0 10px rgba(0, 0, 255, 0.6), 0 0 15px rgba(0, 0, 255, 0.4);
+    }
+}
+@keyframes shiftGradient {
+    0% {
+        background: linear-gradient(90deg, #ff6a00, #ee0979);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    }
+    10% {
+        background: linear-gradient(90deg, #ee0979, #ff6a00);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    }
+    20% {
+        background: linear-gradient(90deg, #ff6a00, #ff0080);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    }
+    30% {
+        background: linear-gradient(90deg, #ff0080, #00c6ff);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    }
+    40% {
+        background: linear-gradient(90deg, #00c6ff, #0072ff);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    }
+    50% {
+        background: linear-gradient(90deg, #0072ff, #00ff72);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    }
+    60% {
+        background: linear-gradient(90deg, #00ff72, #ff6a00);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    }
+    70% {
+        background: linear-gradient(90deg, #ff6a00, #ee0979);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    }
+    100% {
+        background: linear-gradient(90deg, #ff6a00, #ee0979);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    }
+}
