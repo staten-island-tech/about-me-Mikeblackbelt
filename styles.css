@@ -5,44 +5,30 @@ body {
     margin: 0;
 }
 
-.header {
-    margin-bottom: 40px;
-    margin-top: 12px;
+.header, .text_intro {
     background-color: rgba(62, 64, 64, 0.6);
-    margin-top: 0;
-    padding-top: 0px;      
-    padding-bottom: 18px;   
-    padding-left: 0;        
-    padding-right: 0;
     width: 60%;
-    max-width: 700px;       
+    max-width: 700px;
     min-width: 320px;
     max-height: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateY(20px) ;       
+    margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     border: 2px solid #444;
+}
+
+.header {
+    padding: 0 0 18px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translateY(20px);
 }
-
-#ttl span:nth-child(1) { -webkit-transform: rotate(-30deg); transform: rotate(-30deg); animation: shiftGradient 7s infinite; animation-delay: 0s;}
-#ttl span:nth-child(2) { -webkit-transform: rotate(-18deg); transform: rotate(-18deg); animation: shiftGradient 7s infinite; animation-delay: 1s;}
-#ttl span:nth-child(3) { -webkit-transform: rotate(-6deg); transform: rotate(-6deg); animation: shiftGradient 7s infinite; animation-delay: 2s;}
-#ttl span:nth-child(4) { -webkit-transform: rotate(6deg); transform: rotate(6deg); animation: shiftGradient 7s infinite; animation-delay: 3s;}
-#ttl span:nth-child(5) { -webkit-transform: rotate(18deg); transform: rotate(18deg); animation: shiftGradient 7s infinite; animation-delay: 4s;}
-#ttl span:nth-child(6) { -webkit-transform: rotate(30deg); transform: rotate(30deg); animation: shiftGradient 7s infinite; animation-delay: 5s;}
-
-#name span:nth-child(1) { animation: glowShift 3s infinite alternate, shiftGradient 3s infinite; animation-delay: 6s; }
-#name span:nth-child(2) { animation: glowShift 3s infinite alternate, shiftGradient 3s infinite; animation-delay: 7s; }
 
 #ttl {
     animation: shiftGradient 7s infinite;
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: transparent;
     font-size: 50px;
     margin-bottom: 20px;
@@ -54,80 +40,71 @@ body {
     transform-origin: bottom center;
 }
 
+#ttl span:nth-child(1) { transform: rotate(-30deg); animation: shiftGradient 7s infinite; animation-delay: 0s; }
+#ttl span:nth-child(2) { transform: rotate(-18deg); animation: shiftGradient 7s infinite; animation-delay: 1s; }
+#ttl span:nth-child(3) { transform: rotate(-6deg); animation: shiftGradient 7s infinite; animation-delay: 2s; }
+#ttl span:nth-child(4) { transform: rotate(6deg); animation: shiftGradient 7s infinite; animation-delay: 3s; }
+#ttl span:nth-child(5) { transform: rotate(18deg); animation: shiftGradient 7s infinite; animation-delay: 4s; }
+#ttl span:nth-child(6) { transform: rotate(30deg); animation: shiftGradient 7s infinite; animation-delay: 5s; }
+
 #name {
     font-size: 40px;
     margin-top: 0;
     color: transparent;
 }
-.text_intro {
+
+#name span:nth-child(1) { animation: glowShift 3s infinite alternate, shiftGradient 3s infinite; animation-delay: 6s; }
+#name span:nth-child(2) { animation: glowShift 3s infinite alternate, shiftGradient 3s infinite; animation-delay: 7s; }
+
+.text_intro, .skills {
     font-size: 18px;
     line-height: 1.6;
-    color: #eee;
-    background-color: rgba(62, 64, 64, 0.6);
-    width: 60%;
-    max-width: 700px;       
-    min-width: 320px;
-    max-height: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    animation: colorShift 10s infinite, spawnIN 10s forwards;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    border: 2px solid #444;
     text-align: left;
 }
 
-@keyframes shiftGradient {
-    0% {
-        background: linear-gradient(90deg, #6a0dad, #00fff7, #ffb347);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    14% {
-        background: linear-gradient(90deg, #00fff7, #ff00d4, #43e97b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    28% {
-        background: linear-gradient(90deg, #ff00d4, #ff7f50, #38f9d7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    42% {
-        background: linear-gradient(90deg, #ff7f50, #00d2ff, #fa709a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    57% {
-        background: linear-gradient(90deg, #00d2ff, #ff6ec7, #ffe53b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    71% {
-        background: linear-gradient(90deg, #ff6ec7, #7f00ff, #23a6d5);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    85% {
-        background: linear-gradient(90deg, #7f00ff, #00fff7, #f64f59);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    100% {
-        background: linear-gradient(90deg, #6a0dad, #00fff7, #ffb347);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+
+.skills h4 {
+    text-shadow: 0 0 5px rgba(0, 255, 247, 0.7);
+    text-align: center;
 }
+
+.skills p, 
+.skills li, 
+.text_intro p{
+    text-align: center;
+}
+
+.skills li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes shiftGradient {
+    0%, 100% { background: linear-gradient(90deg, #6a0dad, #00fff7, #ffb347); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    14% { background: linear-gradient(90deg, #00fff7, #ff00d4, #43e97b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    28% { background: linear-gradient(90deg, #ff00d4, #ff7f50, #38f9d7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    42% { background: linear-gradient(90deg, #ff7f50, #00d2ff, #fa709a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    57% { background: linear-gradient(90deg, #00d2ff, #ff6ec7, #ffe53b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    71% { background: linear-gradient(90deg, #ff6ec7, #7f00ff, #23a6d5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    85% { background: linear-gradient(90deg, #7f00ff, #00fff7, #f64f59); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+}
+
 @keyframes glowShift {
-    0% {
-        text-shadow: 0 0 1px rgba(106, 13, 173, 0.5), 
-                     0 0 3px rgba(0, 255, 247, 0.3), 
-                     0 0 5px rgba(255, 0, 212, 0.2);
-    }
-    100% {
-        text-shadow: 0 0 1px rgba(127, 0, 255, 0.5), 
-                     0 0 3px rgba(0, 255, 247, 0.3), 
-                     0 0 5px rgba(255, 110, 199, 0.2);
-    }
+    0% { text-shadow: 0 0 1px rgba(106, 13, 173, 0.5), 0 0 3px rgba(0, 255, 247, 0.3), 0 0 5px rgba(255, 0, 212, 0.2); }
+    100% { text-shadow: 0 0 1px rgba(127, 0, 255, 0.5), 0 0 3px rgba(0, 255, 247, 0.3), 0 0 5px rgba(255, 110, 199, 0.2); }
+}
+
+@keyframes colorShift {
+    0%, 100% { color: #ffffff; }
+    25% { color: #6a0dad; }
+    50% { color: #ffb347; }
+    75% { color: #00fff7; }
+}
+
+@keyframes spawnIN {
+    0%, 80% { opacity: 0; }
+    100% { opacity: 1; }
 }
