@@ -73,7 +73,7 @@ body {
 }
 
 .Skills {
-    animation: colorShift2 7.3s infinite, spawnIN 7.3s forwards;
+    animation: inherit, colorShift2 7.3s infinite, spawnIN 7.3s forwards;
 }
 
 .Skills h4 {
